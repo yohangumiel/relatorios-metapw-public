@@ -54,6 +54,8 @@
     .card span { margin-top: 5px; color: var(--muted); font-size: 14px; }
     .featured { border-color: rgba(216,183,90,.65); box-shadow: 0 12px 42px rgba(0,0,0,.22); }
     .featured strong { color: var(--gold); }
+    .pending { opacity: .62; cursor: default; }
+    .pending:hover { transform: none; border-color: var(--border); background: linear-gradient(145deg, rgba(15, 51, 28, .94), var(--panel)); }
     @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } .card { min-height: 140px; } }
   </style>
 </head>
@@ -65,21 +67,21 @@
       <p>Guerras, desempenho e voz da comunidade em um só lugar.</p>
     </header>
     <section class="grid" aria-label="Relatórios">
-      <a class="card featured" href="kda_report.html">
+      <a class="card featured" href="guerra_30-07.html">
         <span class="icon">⚔️</span>
         <strong>Última guerra</strong>
         <span>KDA, replay e análises</span>
       </a>
-      <a class="card" href="relatorio_7d.html">
+      <article class="card pending">
         <span class="icon">📊</span>
         <strong>Sugestões — 7 dias</strong>
-        <span>Movimentos recentes da comunidade</span>
-      </a>
-      <a class="card" href="relatorio_30d.html">
+        <span>Em breve — aguardando o canal de sugestões</span>
+      </article>
+      <article class="card pending">
         <span class="icon">🗓️</span>
         <strong>Sugestões — 30 dias</strong>
-        <span>Visão consolidada do período</span>
-      </a>
+        <span>Em breve — aguardando o canal de sugestões</span>
+      </article>
     </section>
   </main>
 </body>
