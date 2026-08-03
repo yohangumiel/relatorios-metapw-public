@@ -10749,7 +10749,9 @@ body {
         top:       { src: 'assets/komy/komy-finger-gun.png', label: 'Melhor K/D' },
         legendary: { src: 'assets/komy/komy-kd-legendary.png', label: 'Lendário' },
         excellent: { src: 'assets/komy/komy-kd-excellent.png', label: 'Excelente' },
-        normal:    { src: 'assets/komy/komy-kd-normal.png', label: 'Positivo' },
+        positive_high: { src: 'assets/komy/komy-kd-positive-high.png', label: 'Positivo alto' },
+        normal:        { src: 'assets/komy/komy-kd-normal.png', label: 'Positivo médio' },
+        positive_low:  { src: 'assets/komy/komy-kd-positive-low.png', label: 'Positivo baixo' },
         bad:       { src: 'assets/komy/komy-kd-bad.png', label: 'Negativo' },
         disaster:  { src: 'assets/komy/komy-kd-disaster.png', label: 'Desastre' }
     };
@@ -10769,7 +10771,9 @@ body {
             if (qualifiedSet[name] && maxKd > 0 && kd === maxKd) player.kt = 'top';
             else if (qualifiedSet[name] && kd >= legendaryCut) player.kt = 'legendary';
             else if (qualifiedSet[name] && kd >= excellentCut) player.kt = 'excellent';
-            else if (kd >= 1) player.kt = 'normal';
+            else if (kd >= 3) player.kt = 'positive_high';
+            else if (kd >= 1.5) player.kt = 'normal';
+            else if (kd >= 1) player.kt = 'positive_low';
             else if (kd >= .5) player.kt = 'bad';
             else player.kt = 'disaster';
             player.kmax = maxKd;
